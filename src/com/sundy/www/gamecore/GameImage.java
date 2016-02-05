@@ -1,10 +1,11 @@
 package com.sundy.www.gamecore;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import com.rupeng.game.GameCore;
 
-public class GameImage extends GameObject
+public class GameImage extends GameRect
 {
 
 	// Í¼Æ¬µÄ±àºÅ
@@ -103,13 +104,31 @@ public class GameImage extends GameObject
 	{
 		GameCore.setImageSource(this.ImageNum, imgName);
 	}
-	
+
 	/**
 	 * ÒÆ³ýÍ¼Æ¬
 	 */
 	public void remove()
 	{
 		GameCore.removeImage(this.ImageNum);
+	}
+
+	@Override
+	public Dimension getSize()
+	{
+		return GameCore.getImageSize(ImageNum);
+	}
+
+	@Override
+	public int getHeight()
+	{
+		return GameCore.getImageHeight(ImageNum);
+	}
+
+	@Override
+	public int getWidth()
+	{
+		return GameCore.getImageWidth(ImageNum);
 	}
 
 }

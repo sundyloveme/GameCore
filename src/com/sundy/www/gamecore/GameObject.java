@@ -25,5 +25,35 @@ public abstract class GameObject
 	// 设置坐标
 	public abstract void setPosition(int x, int y);
 
-	moveRight()
+	/**
+	 * 右移动
+	 */
+	public void moveRight()
+	{
+		this.setPosition(this.getX() + 1, this.getY());
+	}
+
+	/**
+	 * 左移动
+	 */
+	public void moveLeft()
+	{
+		this.setPosition(this.getX() - 1, this.getY());
+	}
+
+	/**
+	 * 上移动
+	 */
+	public void moveUp()
+	{
+		this.setPosition(this.getX(), this.getY() - 1);
+	}
+
+	/**
+	 * 下移动
+	 */
+	public void moveDown()
+	{
+		this.setPosition(this.getX(), this.getY() + 1);
+	}
 }

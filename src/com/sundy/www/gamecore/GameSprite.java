@@ -1,10 +1,11 @@
 package com.sundy.www.gamecore;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import com.rupeng.game.GameCore;
 
-public class GameSprite extends GameObject
+public class GameSprite extends GameRect
 {
 	//精灵的编号
 	private int spriteNum;
@@ -79,7 +80,7 @@ public class GameSprite extends GameObject
 	@Override
 	public int getY()
 	{
-		return GameCore.getTextY(this.spriteNum);
+		return GameCore.getSpriteY(this.spriteNum);
 	}
 	
 	/**
@@ -95,6 +96,7 @@ public class GameSprite extends GameObject
 	 * 获得高度
 	 * @return
 	 */
+	@Override
 	public int getHeight()
 	{
 		return GameCore.getSpriteHeight(spriteNum);
@@ -104,6 +106,7 @@ public class GameSprite extends GameObject
 	 * 获得宽度
 	 * @return
 	 */
+	@Override
 	public int getWidth()
 	{
 		return GameCore.getSpriteWidth(spriteNum);
@@ -134,4 +137,13 @@ public class GameSprite extends GameObject
 	{
 		GameCore.setSpriteFlipY(spriteNum, flipY);
 	}
+	
+
+	@Override
+	public Dimension getSize()
+	{
+		return GameCore.getSpriteSize(spriteNum);
+	}
+
+	
 }
