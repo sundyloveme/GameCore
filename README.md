@@ -3,3 +3,7 @@
 # 注意
 导入jl1.0.jar和RuPengGame.jar，因为我是对他们的引用
 实际上RuPengGame.jar也是引用了java内部的swing
+在src下建立 Image，Sprites，Sounds包 
+图片要放在Iamges包下
+精灵放在Sprites包下
+音乐放在Sounds包下
