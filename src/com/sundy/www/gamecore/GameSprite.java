@@ -21,6 +21,18 @@ public class GameSprite extends GameRect
 	}
 	
 	/**
+	 * 构造函数
+	 * @param spriteName 精灵名字
+	 * @param x x坐标
+	 * @param y y坐标
+	 */
+	public GameSprite(String spriteName,int x,int y)
+	{
+		this(spriteName);
+		GameCore.setSpritePosition(this.spriteNum, x, y);
+	}
+	
+	/**
 	 * 显示精灵
 	 */
 	@Override
