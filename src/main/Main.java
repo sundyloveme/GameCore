@@ -22,7 +22,6 @@ public class Main implements Runnable
 	@Override
 	public void run()
 	{
-		// TODO 自动生成的方法存根
 	}
 	public static void main(String[] args)
 	{
