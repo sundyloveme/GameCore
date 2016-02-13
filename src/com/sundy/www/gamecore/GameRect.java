@@ -6,10 +6,19 @@ import java.awt.Point;
 public abstract class GameRect extends GameObject
 {
 
+	/**
+	 * 获得尺寸
+	 */
 	public abstract Dimension getSize();
 
+	/**
+	 * 获得高度
+	 */
 	public abstract int getHeight();
 
+	/**
+	 * 获得宽度
+	 */
 	public abstract int getWidth();
 
 	/**
@@ -21,11 +30,10 @@ public abstract class GameRect extends GameObject
 	 */
 	public Boolean xiangJiao(GameRect rect)
 	{
-		int a, b,h,ry;
+		int a, b, h, ry;
 
-		
-		h=rect.getHeight();
-		ry=rect.getY();
+		h = rect.getHeight();
+		ry = rect.getY();
 		a = rect.getY() + rect.getHeight();
 		b = getY();
 		// 上矩形
@@ -41,7 +49,7 @@ public abstract class GameRect extends GameObject
 		{
 			return false;
 		}
-		
+
 		a = rect.getX() + rect.getWidth();
 		b = getX();
 		// 左矩形
@@ -49,7 +57,7 @@ public abstract class GameRect extends GameObject
 		{
 			return false;
 		}
-		
+
 		a = getX() + getWidth();
 		b = rect.getX();
 		// 右矩形

@@ -5,6 +5,12 @@ import java.awt.Point;
 
 import com.rupeng.game.GameCore;
 
+/**
+ * 游戏图片的类
+ * 
+ * @author Sundy
+ * (moveRight和moveLeft在image类中不可使用)
+ */
 public class GameImage extends GameRect
 {
 
@@ -15,24 +21,22 @@ public class GameImage extends GameRect
 	 * 构造函数
 	 * 
 	 * @param imgName
-	 *            图片名称
+	 *            图片名称（.jpg结尾）
+	 * @param x
+	 *            坐标x
+	 * @param y
+	 *            坐标y （如果没有设置坐标，则图片不会显示）
 	 */
-	public GameImage(String imgName)
+	public GameImage(String imgName, int x, int y)
 	{
+		// 通过编号器获得编号
 		this.ImageNum = NumberManager.instance.getNum();
 		GameCore.createImage(this.ImageNum, imgName);
+		GameCore.setImagePosition(ImageNum, x, y);
 	}
 
 	/**
-	 * 缺省构造函数
-	 */
-	public GameImage()
-	{
-		this("");
-	}
-
-	/**
-	 * 显示图片
+	 * 显示
 	 */
 	@Override
 	public void show()
@@ -41,7 +45,7 @@ public class GameImage extends GameRect
 	}
 
 	/**
-	 * 隐藏图片
+	 * 隐藏
 	 */
 	@Override
 	public void hide()
@@ -77,7 +81,7 @@ public class GameImage extends GameRect
 	}
 
 	/**
-	 * 获得x
+	 * 获得坐标x
 	 */
 	@Override
 	public int getX()
@@ -86,7 +90,7 @@ public class GameImage extends GameRect
 	}
 
 	/**
-	 * 获得y
+	 * 获得坐标y
 	 */
 	@Override
 	public int getY()
@@ -95,7 +99,7 @@ public class GameImage extends GameRect
 	}
 
 	/**
-	 * 设置图片名称
+	 * 设置名称
 	 * 
 	 * @param imgName
 	 *            图片名称
@@ -106,25 +110,34 @@ public class GameImage extends GameRect
 	}
 
 	/**
-	 * 移除图片
+	 * 移除
 	 */
 	public void remove()
 	{
 		GameCore.removeImage(this.ImageNum);
 	}
 
+	/**
+	 * 获得尺寸
+	 */
 	@Override
 	public Dimension getSize()
 	{
 		return GameCore.getImageSize(ImageNum);
 	}
 
+	/**
+	 * 获得高度
+	 */
 	@Override
 	public int getHeight()
 	{
 		return GameCore.getImageHeight(ImageNum);
 	}
 
+	/**
+	 * 获得宽度
+	 */
 	@Override
 	public int getWidth()
 	{
