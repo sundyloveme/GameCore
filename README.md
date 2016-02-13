@@ -3,9 +3,8 @@
 # 说明
 * com.sundy.www.gamecore包下存放了核心类库。
 * Images，Sprites，Sounds存放各类的资源。
-* d_test.main包下提供测试代码（注意：将逻辑实现在run（）方法里）。
-![](https://github.com/sundyloveme/GameCore/blob/master/src/Images/QQ%E6%88%AA%E5%9B%BE20160213215754.png)
-  
+* d_test.main包下提供测试代码（注意：将逻辑实现在run（）方法里）。  
+![](https://github.com/sundyloveme/GameCore/blob/master/src/Images/QQ%E6%88%AA%E5%9B%BE20160213215754.png)  
 # 使用方法
 1.将此项目拷贝到到本地，改名。注意要对jl1.0.jar和RuPengGame.jar构建路径（有可能不需要）![](https://github.com/sundyloveme/GameCore/blob/master/src/Images/QQ%E6%88%AA%E5%9B%BE20160213215543.png)
 2.浏览d_test.main下的代码，仿照建立一个新包实现游戏逻辑。
