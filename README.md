@@ -9,7 +9,8 @@
 ***
 
 # 使用方法
-1.将此项目拷贝到到本地，导入，改名（肯定要改成游戏名字啊）。注意要对jl1.0.jar和RuPengGame.jar构建路径（有可能不需要）![](https://github.com/sundyloveme/GameCore/blob/master/src/Images/QQ%E6%88%AA%E5%9B%BE20160213215543.png)  
+1.将此项目拷贝到到本地，导入，改名（肯定要改成游戏名字啊）。注意要对jl1.0.jar和RuPengGame.jar构建路径（有可能不需要）  
+![](https://github.com/sundyloveme/GameCore/blob/master/src/Images/QQ%E6%88%AA%E5%9B%BE20160213215543.png)  
 2.浏览d_test.main下的代码，仿照建立一个新包实现游戏逻辑。（当然也可以不这么做，看我的习惯了）
 # 注意
 * 要导入jl1.0.jar和RuPengGame.jar，因为我是对他们的引用（实际上RuPengGame.jar也是引用了java内部的swing）。
